@@ -1,0 +1,38 @@
+<div id="login-dialog" class="small-dialog zoom-anim-dialog mfp-hide apply-popup woocommerce-login-popup">
+  <div class="small-dialog-headline">
+    <h2>Login</h2>
+  </div>
+  <div class="small-dialog-content woo-reg-box">
+    <form  [formGroup]="loginForm" class="login workscout_form">
+
+
+      <p class="form-row form-row-wide">
+        <label for="username">Username or email address <span class="required">*</span>
+          <i class="ln ln-icon-Male"></i><input type="text" class="input-text" name="username" id="username" formControlName="email" />
+        </label>
+      </p>
+      <p class="form-row form-row-wide">
+        <label for="password">Password <span class="required">*</span>
+          <i class="ln ln-icon-Lock-2"></i><input class="input-text" type="password" name="password" id="password"  formControlName="password"/>
+        </label>
+      </p>
+
+
+      <p class="form-row">
+        <input type="hidden" id="_wpnonce" name="_wpnonce" value="2790527891" /><input type="hidden" name="_wp_http_referer" value="/" />
+        <button type="submit" class="button" name="login" value="Login" (click)="tryLogin()"><a href="/http://localhost:4200/accueil">Login</a></button>
+
+
+        <label for="rememberme" class="inline">
+          <input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember me                    </label>
+      </p>
+      <p class="lost_password">
+        <a href="my-account/lost-password/index.html">Lost your password?</a>
+      </p>
+      <input type="hidden" name="redirect_to" value="job-dashboard/index.html" />
+
+
+    </form>
+
+  </div>
+</div>
