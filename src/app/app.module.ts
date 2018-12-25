@@ -11,6 +11,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { OffreComponent } from './offre/offre.component';
 import {AuthGuardService} from './Services/auth-guard.service';
 import { CategoriesComponent } from './categories/categories.component';
+import { ProfilComponent } from './profil/profil.component';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import { CategoriesComponent } from './categories/categories.component';
 
     OffreComponent,
 
-    CategoriesComponent
+    CategoriesComponent,
+
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
