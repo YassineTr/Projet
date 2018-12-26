@@ -30,7 +30,7 @@ createForm() {
     this.authService.doLogin(email, password)
       .then(res => {
         console.log(res);
-        this.router.navigateByUrl('http://localhost:4200/accueil');
+        this.router.navigate(['\profil']);
         this.errorMessage = 'Welcome';
         console.log('succes');
       }, err => {

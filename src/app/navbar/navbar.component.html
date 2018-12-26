@@ -1,0 +1,23 @@
+<nav id="navigation" class="menu">
+
+  <ul id="responsive" class="menu"><li id="menu-item-2876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-2876"><a href="index.html">Home</a>
+  </li>
+    <li><a href="index.html"></a></li>
+    <li id="menu-item-2859" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2859"><a href="#">For Candidates</a>
+
+    </li>
+    <li id="menu-item-2860" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2860"><a href="#">For Employers</a>
+
+    </li>
+
+  </ul>
+  <ul class="float-right">
+    <li [hidden]="(isAuth | async)"><a href="#signup-dialog" class="small-dialog popup-with-zoom-anim"><i class="fa fa-user"></i> Sign Up</a></li>
+    <li [hidden]="(isAuth | async)"><a href="#login-dialog" class="small-dialog popup-with-zoom-anim"><i class="fa fa-lock"></i> Log In</a> </li>
+    <li [hidden]="!(isAuth | async)"><a   (click)="doLogOut()" class="small-dialog popup-with-zoom-anim" routerLink="/accueil"><i class="fa fa-lock"></i> Log Out</a> </li>
+  </ul>
+  <!-- <ul class="float-right">
+    <li><button (click)="doLogOut()" class="small-dialog popup-with-zoom-anim"><i class="fa fa-lock"></i> Log Out</button> </li>
+    <li><a href="#login-dialog" class="small-dialog popup-with-zoom-anim"><i class="fa fa-lock"></i> {{ isAuth | async}}</a> </li>
+  </ul> -->
+</nav>

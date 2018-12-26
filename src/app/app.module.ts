@@ -12,6 +12,7 @@ import { OffreComponent } from './offre/offre.component';
 import {AuthGuardService} from './Services/auth-guard.service';
 import { CategoriesComponent } from './categories/categories.component';
 import { ProfilComponent } from './profil/profil.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { ProfilComponent } from './profil/profil.component';
 
     CategoriesComponent,
 
-    ProfilComponent
+    ProfilComponent,
+
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
