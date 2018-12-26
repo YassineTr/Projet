@@ -13,6 +13,7 @@ import {AuthGuardService} from './Services/auth-guard.service';
 import { CategoriesComponent } from './categories/categories.component';
 import { ProfilComponent } from './profil/profil.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PostjobComponent } from './postjob/postjob.component';
 
 
 @NgModule({
@@ -28,7 +29,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 
     ProfilComponent,
 
-    NavbarComponent
+    NavbarComponent,
+
+    PostjobComponent
   ],
   imports: [
     BrowserModule,

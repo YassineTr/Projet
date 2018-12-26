@@ -1,3 +1,535 @@
-<p>
-  offre works!
-</p>
+<body class="page-template-default page page-id-2871 fullwidth group-blog workscout wpb-js-composer js-comp-ver-5.4.7 vc_responsive">
+
+
+<div id="wrapper">
+
+  <header class="default sticky-header" id="main-header">
+    <div class="container">
+      <div class="sixteen columns">
+
+        <!-- Logo -->
+        <div id="logo">
+          <a href="../index.html" title="WorkScout" rel="home"></a>
+        </div>
+        <!-- Mobile Navigation -->
+        <div class="mmenu-trigger">
+          <button class="hamburger hamburger--collapse" type="button">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+          </button>
+        </div>
+
+        <!-- Menu -->
+
+        <nav id="navigation" class="menu">
+
+          <ul id="responsive" class="menu"><li id="menu-item-2876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-2876"><a href="../index.html">Home</a>
+
+          </li>
+            <li id="menu-item-2859" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-2859" routerLink="/profil"><a>Profil</a>
+
+            </li>
+            <li id="menu-item-2860" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2860"><a href="#">Post a job</a>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+
+
+
+
+
+      </div>
+    </div>
+  </header>
+  <div class="clearfix"></div>
+  <!-- Titlebar
+  ================================================== -->
+
+
+  <div class="container  wpjm-container right-sidebar">
+    <!-- Widgets -->
+    <div class="five columns sidebar"  role="complementary">
+      <div class="widget job-widget-keywords">
+        <h4>Keywords</h4>
+        <form class="list-search"  method="GET" action="https://workscout.in/browse-jobs/">
+          <div class="search_keywords">
+            <input type="text" name="search_keywords" id="search_keywords" placeholder="job title, keywords or company name" value="" />
+            <div class="clearfix"></div>
+          </div>
+        </form>
+      </div>
+      <form class="job_filters in_sidebar">
+        <input type="hidden" name="search_keywords" id="search_keywords" placeholder="job title, keywords or company name" value="" />
+
+        <div class="job_filters_links"></div>
+
+
+        <div class="widget job-widget-location" >
+          <h4>Location</h4>
+          <div class="search_location">
+            <input type="text" name="search_location" id="search_location" placeholder="Location" value="" />
+
+            <input type="text" name="search_radius" id="search_radius" value="50"/>
+            <select class="radius_type chosen-select-radius" name="radius_type">
+              <option value="miles">miles</option>
+              <option value="km">km</option>
+            </select>
+            <div class="clearfix"></div>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="widget job-widget-job-types" >
+          <h4>Job type</h4>
+          <ul class="job_types checkboxes">
+            <li>
+              <input type="checkbox" name="filter_job_type[]" value="freelance"  checked='checked' id="job_type_freelance" />
+              <label for="job_type_freelance" class="freelance"> Freelance</label>
+            </li>
+            <li>
+              <input type="checkbox" name="filter_job_type[]" value="full-time"  checked='checked' id="job_type_full-time" />
+              <label for="job_type_full-time" class="full-time"> Full Time</label>
+            </li>
+            <li>
+              <input type="checkbox" name="filter_job_type[]" value="internship"  checked='checked' id="job_type_internship" />
+              <label for="job_type_internship" class="internship"> Internship</label>
+            </li>
+            <li>
+              <input type="checkbox" name="filter_job_type[]" value="part-time"  checked='checked' id="job_type_part-time" />
+              <label for="job_type_part-time" class="part-time"> Part Time</label>
+            </li>
+            <li>
+              <input type="checkbox" name="filter_job_type[]" value="temporary"  checked='checked' id="job_type_temporary" />
+              <label for="job_type_temporary" class="temporary"> Temporary</label>
+            </li>
+          </ul>
+          <input type="hidden" name="filter_job_type[]" value="" />
+        </div>
+
+
+        <div class="widget job-widget-categories" >
+          <h4>Category</h4>
+          <div class="search_categories">
+
+            <select name='search_categories[]' id='search_categories' class='job-manager-category-dropdown '  data-placeholder='Choose a category&hellip;' data-no_results_text='No results match' data-multiple_text='Select Some Options'>
+              <option value="">Any category</option>	<option class="level-0" value="122">Accounting / Finance</option>
+              <option class="level-0" value="124">Automotive Jobs</option>
+              <option class="level-0" value="132">Construction / Facilities</option>
+              <option class="level-0" value="137">Design, Art &amp; Multimedia</option>
+              <option class="level-1" value="172">&nbsp;&nbsp;&nbsp;Adobe Photoshop</option>
+              <option class="level-1" value="173">&nbsp;&nbsp;&nbsp;Animation</option>
+              <option class="level-1" value="174">&nbsp;&nbsp;&nbsp;Design</option>
+              <option class="level-1" value="145">&nbsp;&nbsp;&nbsp;Graphic Design</option>
+              <option class="level-1" value="147">&nbsp;&nbsp;&nbsp;Illustration</option>
+              <option class="level-1" value="150">&nbsp;&nbsp;&nbsp;Logo Design</option>
+              <option class="level-1" value="168">&nbsp;&nbsp;&nbsp;Video</option>
+              <option class="level-0" value="140">Education Training</option>
+              <option class="level-0" value="146">Healthcare</option>
+              <option class="level-0" value="157">Restaurant / Food Service</option>
+              <option class="level-0" value="159">Sales &amp; Marketing</option>
+              <option class="level-1" value="175">&nbsp;&nbsp;&nbsp;Display Advertising</option>
+              <option class="level-1" value="176">&nbsp;&nbsp;&nbsp;Email Marketing</option>
+              <option class="level-1" value="177">&nbsp;&nbsp;&nbsp;Lead Generation</option>
+              <option class="level-1" value="178">&nbsp;&nbsp;&nbsp;Market &amp; Customer Research</option>
+              <option class="level-1" value="179">&nbsp;&nbsp;&nbsp;Marketing Strategy</option>
+              <option class="level-1" value="180">&nbsp;&nbsp;&nbsp;Public Relations</option>
+              <option class="level-0" value="165">Telecommunications</option>
+              <option class="level-0" value="167">Transportation / Logistics</option>
+            </select>
+
+          </div>
+        </div>
+
+        <div class="widget widget_range_filter widget-salary-filter" >
+
+          <h4 class="checkboxes" style="margin-bottom: 0;">
+            <input type="checkbox" name="filter_by_salary_check" id="salary_check" class="filter_by_check">
+            <label for="salary_check">Filter by Salary</label>
+          </h4>
+
+          <div class="widget_range_filter-inside">
+            <div class="salary_amount range-indicator">
+              <span class="from"></span> &mdash; <span class="to"></span>
+            </div>
+            <input type="hidden" name="filter_by_salary" id="salary_amount" type="checkbox"   >
+            <div id="salary-range"></div>
+            <div class="margin-bottom-50"></div>
+          </div>
+
+        </div>
+
+        <div class="widget widget_range_filter widget-rate-filter" >
+          <h4 class="checkboxes" style="margin-bottom: 0;">
+            <input type="checkbox" name="filter_by_rate_check" id="filter_by_rate" class="filter_by_check">
+            <label for="filter_by_rate">Filter by Rate</label>
+          </h4>
+          <div class="widget_range_filter-inside">
+            <div class="rate_amount range-indicator">
+              <span class="from"></span> &mdash; <span class="to"></span>
+            </div>
+            <input type="hidden" name="filter_by_rate" id="rate_amount" type="checkbox"  >
+            <div id="rate-range"></div>
+          </div>
+        </div>
+
+        <div class="widget widget_range_filter widget-tag" >
+          <div class="filter_wide filter_by_tag">
+            <h4>Filter by tag:</h4>
+            <span class="filter_by_tag_cloud"></span>
+          </div>
+        </div>
+
+      </form>
+    </div><!-- #secondary -->
+
+    <article id="post-2871" class="eleven columns post-2871 page type-page status-publish hentry">
+      <div class="padding-right">
+
+        <div class="job_listings " data-location="" data-keywords="" data-show_filters="false" data-show_pagination="true" data-job_types="" data-per_page="10" data-orderby="featured" data-order="DESC" data-categories="" >
+          <!-- Listings Loader -->
+          <div class="listings-loader">
+            <div class="spinner">
+              <div class="double-bounce1"></div>
+              <div class="double-bounce2"></div>
+            </div>
+          </div>
+
+          <ul class="job_listings job-list full  new-layout " >
+
+            <!-- Listing -->
+            <li data-longitude="-0.001870000000053551" data-latitude="51.54327"
+                data-color="#e12335" >
+              <a href="../job/restaurant-dishwasher/index.html" class="left post-2489 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-miami job_listing_category-restaurant-food-service job_listing_type-temporary job-type-temporary job_position_featured" data-longitude="-0.001870000000053551" data-latitude="51.54327"   data-color="#e12335" >
+                <div class="listing-logo">
+                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/company-logo.png" alt="King LLC" />	</div>
+                <div class="listing-title">
+                  <h4>Restaurant Dishwasher
+                    <span class="job-type temporary">Temporary</span>
+
+                  </h4>
+                  <ul class="listing-icons">
+
+                    <li><i class="ln ln-icon-Management"></i> King LLC</li>
+
+                    <li><i class="ln ln-icon-Map2"></i>  Miami</li>
+
+
+                    <li><i class="ln ln-icon-Money-2"></i>
+                      &#36;55000 - &#36;70000						</li>
+
+                  </ul>
+
+                </div>
+              </a>
+            </li>
+            <!-- Listing -->
+            <li data-longitude="-1.546126700000059" data-latitude="53.3795271"
+                data-color="#f1630d" >
+              <a href="../job/clinical-psychologist/index.html" class="left post-2492 job_listing type-job_listing status-publish hentry job_listing_region-new-york job_listing_category-healthcare job_listing_type-part-time job-type-part-time" data-longitude="-1.546126700000059" data-latitude="53.3795271"   data-color="#f1630d" >
+                <div class="listing-logo">
+                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Rose Clinic" />	</div>
+                <div class="listing-title">
+                  <h4>Clinical psychologist
+                    <span class="job-type part-time">Part Time</span>
+
+                  </h4>
+                  <ul class="listing-icons">
+
+                    <li><i class="ln ln-icon-Management"></i> Rose Clinic</li>
+
+                    <li><i class="ln ln-icon-Map2"></i>  New York</li>
+
+
+                    <li><i class="ln ln-icon-Money-2"></i>
+                      &#36;40000 - &#36;50000						</li>
+
+                  </ul>
+
+                </div>
+              </a>
+            </li>
+            <!-- Listing -->
+            <li data-longitude="-73.9790653" data-latitude="40.7668893"
+                data-color="#186fc9" >
+              <a href="../job/senior-health-and-nutrition-advisor/index.html" class="left post-2490 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-new-york job_listing_category-healthcare job_listing_type-full-time job-type-full-time" data-longitude="-73.9790653" data-latitude="40.7668893"   data-color="#186fc9" >
+                <div class="listing-logo">
+                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/Untitled-1-Recovered-150x150_036a17cc6b1cbce4285ea7c4d6a34e16.png" alt="Telimed" />	</div>
+                <div class="listing-title">
+                  <h4>Senior Health and Nutrition Advisor
+                    <span class="job-type full-time">Full Time</span>
+
+                  </h4>
+                  <ul class="listing-icons">
+
+                    <li><i class="ln ln-icon-Management"></i> Telimed</li>
+
+                    <li><i class="ln ln-icon-Map2"></i>  New York</li>
+
+
+                    <li><i class="ln ln-icon-Money-2"></i>
+                      &#36;30000 - &#36;35000						</li>
+
+                  </ul>
+
+                </div>
+              </a>
+            </li>
+            <!-- Listing -->
+            <li data-longitude="13.3883826" data-latitude="52.5318835"
+                data-color="#53b427" >
+              <a href="../job/social-media-and-public-relation-executive/index.html" class="left post-2487 job_listing type-job_listing status-publish hentry job_listing_region-miami job_listing_category-market-customer-research job_listing_category-sales-marketing job_listing_type-freelance job-type-freelance" data-longitude="13.3883826" data-latitude="52.5318835"   data-color="#53b427" >
+                <div class="listing-logo">
+                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Socielity" />	</div>
+                <div class="listing-title">
+                  <h4>Social Media and Public Relation Executive
+                    <span class="job-type freelance">Freelance</span>
+
+                  </h4>
+                  <ul class="listing-icons">
+
+                    <li><i class="ln ln-icon-Management"></i> Socielity</li>
+
+                    <li><i class="ln ln-icon-Map2"></i>  Miami</li>
+
+
+                    <li><i class="ln ln-icon-Money-2"></i>
+                      &#36;15000						</li>
+
+                  </ul>
+
+                </div>
+              </a>
+            </li>
+            <!-- Listing -->
+            <li data-longitude="-104.8263422" data-latitude="39.6315664"
+                data-color="#e1d123" >
+              <a href="../job/grader-operator/index.html" class="left post-2486 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-san-francisco job_listing_category-construction-facilities job_listing_type-internship job-type-internship" data-longitude="-104.8263422" data-latitude="39.6315664"   data-color="#e1d123" >
+                <div class="listing-logo">
+                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/Untitled-1-150x150.png" alt="Diag Block" />	</div>
+                <div class="listing-title">
+                  <h4>Grader Operator
+                    <span class="job-type internship">Internship</span>
+
+                  </h4>
+                  <ul class="listing-icons">
+
+                    <li><i class="ln ln-icon-Management"></i> Diag Block</li>
+
+                    <li><i class="ln ln-icon-Map2"></i>  San Francisco</li>
+
+
+                    <li><i class="ln ln-icon-Money-2"></i>
+                      &#36;35000 - &#36;38000						</li>
+
+                  </ul>
+
+                </div>
+              </a>
+            </li>
+            <!-- Listing -->
+            <li data-longitude="2.086515400000053" data-latitude="41.4720702"
+                data-color="#186fc9" >
+              <a href="../job/head-of-commercial-contracts/index.html" class="left post-2485 job_listing type-job_listing status-publish hentry job_listing_region-san-francisco job_listing_category-accounting-finance job_listing_type-full-time job-type-full-time" data-longitude="2.086515400000053" data-latitude="41.4720702"   data-color="#186fc9" >
+                <div class="listing-logo">
+                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Moore &amp; Kavinsky" />	</div>
+                <div class="listing-title">
+                  <h4>Head of Commercial Contracts
+                    <span class="job-type full-time">Full Time</span>
+
+                  </h4>
+                  <ul class="listing-icons">
+
+                    <li><i class="ln ln-icon-Management"></i> Moore &amp; Kavinsky</li>
+
+                    <li><i class="ln ln-icon-Map2"></i>  San Francisco</li>
+
+
+
+                  </ul>
+
+                </div>
+              </a>
+            </li>
+            <!-- Listing -->
+            <li data-longitude="-0.4907180000000153" data-latitude="38.34606019999999"
+                data-color="#186fc9" >
+              <a href="../job/telecommunication-systems-engineer/index.html" class="left post-2484 job_listing type-job_listing status-publish hentry job_listing_region-san-francisco job_listing_category-telecommunications job_listing_type-full-time job-type-full-time" data-longitude="-0.4907180000000153" data-latitude="38.34606019999999"   data-color="#186fc9" >
+                <div class="listing-logo">
+                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Virgin" />	</div>
+                <div class="listing-title">
+                  <h4>Telecommunication Systems Engineer
+                    <span class="job-type full-time">Full Time</span>
+
+                  </h4>
+                  <ul class="listing-icons">
+
+                    <li><i class="ln ln-icon-Management"></i> Virgin</li>
+
+                    <li><i class="ln ln-icon-Map2"></i>  San Francisco</li>
+
+
+
+                  </ul>
+
+                </div>
+              </a>
+            </li>
+            <!-- Listing -->
+            <li data-longitude="7.774270200000046" data-latitude="44.25746739999999"
+                data-color="#f1630d" >
+              <a href="../job/motor-vehicle-technician/index.html" class="left post-2483 job_listing type-job_listing status-publish hentry job_listing_region-san-francisco job_listing_category-automotive-jobs job_listing_type-part-time job-type-part-time" data-longitude="7.774270200000046" data-latitude="44.25746739999999"   data-color="#f1630d" >
+                <div class="listing-logo">
+                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Garbage Garage" />	</div>
+                <div class="listing-title">
+                  <h4>Vehicle Technician
+                    <span class="job-type part-time">Part Time</span>
+
+                  </h4>
+                  <ul class="listing-icons">
+
+                    <li><i class="ln ln-icon-Management"></i> Garbage Garage</li>
+
+                    <li><i class="ln ln-icon-Map2"></i>  San Francisco</li>
+
+
+
+                  </ul>
+
+                </div>
+              </a>
+            </li>
+            <!-- Listing -->
+            <li data-longitude="55.2707828" data-latitude="25.2048493"
+                data-color="#333" >
+              <a href="../job/senior-technician-trading-enterprise/index.html" class="left post-2482 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-new-york job_listing_category-transportation-logistics" data-longitude="55.2707828" data-latitude="25.2048493"   data-color="#333" >
+                <div class="listing-logo">
+                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/travelsea1-150x150.png" alt="Travelsea" />	</div>
+                <div class="listing-title">
+                  <h4>Senior Technician &#8211; Trading Enterprise
+
+                  </h4>
+                  <ul class="listing-icons">
+
+                    <li><i class="ln ln-icon-Management"></i> Travelsea</li>
+
+                    <li><i class="ln ln-icon-Map2"></i>  New York</li>
+
+
+
+                  </ul>
+
+                </div>
+              </a>
+            </li>
+            <!-- Listing -->
+            <li data-longitude="-87.77921959999998" data-latitude="41.7014217"
+                data-color="#f1630d" >
+              <a href="../job/warehouse-operative/index.html" class="left post-2481 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-new-york job_listing_category-transportation-logistics job_listing_type-part-time job-type-part-time" data-longitude="-87.77921959999998" data-latitude="41.7014217"   data-color="#f1630d" >
+                <div class="listing-logo">
+                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/sdf2-150x150.png" alt="Cubico" />	</div>
+                <div class="listing-title">
+                  <h4>Warehouse Operative
+                    <span class="job-type part-time">Part Time</span>
+
+                  </h4>
+                  <ul class="listing-icons">
+
+                    <li><i class="ln ln-icon-Management"></i> Cubico</li>
+
+                    <li><i class="ln ln-icon-Map2"></i>  New York</li>
+
+
+
+                  </ul>
+
+                </div>
+              </a>
+            </li>
+
+          </ul>
+
+
+
+          <nav class="job-manager-pagination pagination">
+            <ul>
+
+              <li><span class="current" data-page="1">1</span></li><li><a href="#" data-page="2">2</a></li><li><a href="#" data-page="3">3</a></li>
+              <li style="float:right; position: absolute; right: 0; "><a href="#" data-page="2">Next</a></li>
+            </ul>
+          </nav>
+
+        </div>
+        <footer class="entry-footer">
+        </footer><!-- .entry-footer -->
+      </div>
+    </article>
+
+  </div>
+  <!-- Footer
+  ================================================== -->
+  <div class="margin-top-45"></div>
+
+  <div id="footer">
+    <!-- Main -->
+    <div class="container">
+      <div class="seven columns">
+        <aside id="text-3" class="footer-widget widget_text"><h4>About</h4>			<div class="textwidget"><p>WorkScout is a fully functioning job board Theme for WordPress developed with the popular free WordPress Plugin WP Job Manager.</p>
+          <a href="https://themeforest.net/item/workscout-job-board-wordpress-theme/13591801?ref=purethemes" class="button">Learn More</a></div>
+        </aside>            </div>
+      <div class="three columns">
+        <aside id="nav_menu-2" class="footer-widget widget_nav_menu"><h4>For Candidates</h4><div class="menu-footer-for-candidates-container"><ul id="menu-footer-for-candidates" class="menu"><li id="menu-item-2843" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2843"><a href="#">Browse Jobs</a></li>
+          <li id="menu-item-2844" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2844"><a href="#">Browse Categories</a></li>
+          <li id="menu-item-2845" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2845"><a href="#">Submit Resume</a></li>
+          <li id="menu-item-2846" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2846"><a href="#">Candidate Dashboard</a></li>
+          <li id="menu-item-2847" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2847"><a href="#">Job Alerts</a></li>
+          <li id="menu-item-2848" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2848"><a href="#">My Bookmarks</a></li>
+        </ul></div></aside>            </div>
+      <div class="three columns">
+        <aside id="nav_menu-3" class="footer-widget widget_nav_menu"><h4>For Employers</h4><div class="menu-footer-for-employers-container"><ul id="menu-footer-for-employers" class="menu"><li id="menu-item-2861" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2861"><a href="#">Browse Candidates</a></li>
+          <li id="menu-item-2863" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2863"><a href="#">Employer Dashboard</a></li>
+          <li id="menu-item-2862" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2862"><a href="#">Add Job</a></li>
+          <li id="menu-item-2864" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2864"><a href="#">Job Packages</a></li>
+        </ul></div></aside>            </div>
+      <div class="three columns">
+        <aside id="nav_menu-4" class="footer-widget widget_nav_menu"><h4>Other</h4><div class="menu-footer-other-container"><ul id="menu-footer-other" class="menu"><li id="menu-item-2877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2877"><a href="../shortcodes/index.html">Shortcodes</a></li>
+          <li id="menu-item-2865" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2865"><a href="#">Job Page</a></li>
+          <li id="menu-item-2866" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2866"><a href="#">Job Page Alternative</a></li>
+          <li id="menu-item-2867" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2867"><a href="#">Resume Page</a></li>
+          <li id="menu-item-2868" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2868"><a href="#">Blog</a></li>
+          <li id="menu-item-2872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2872"><a href="../contact/index.html">Contact</a></li>
+        </ul></div></aside>            </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="container">
+      <div class="footer-bottom">
+        <div class="sixteen columns">
+
+          <h4>Follow us</h4><ul class="social-icons"><li><a target="_blank" class="facebook" title="Facebook" href="#"><i class="icon-facebook"></i></a></li><li><a target="_blank" class="twitter" title="Twitter" href="#"><i class="icon-twitter"></i></a></li><li><a target="_blank" class="gplus" title="GooglePlus" href="#"><i class="icon-gplus"></i></a></li><li><a target="_blank" class="linkedin" title="LinkdedIn" href="#"><i class="icon-linkedin"></i></a></li></ul>
+          <div class="copyrights">&copy; Theme by Purethemes.net. All Rights Reserved.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Back To Top Button -->
+  <div id="backtotop"><a href="#"></a></div>
+  <div id="ajax_response"></div>
+</div>
+<!-- Wrapper / End -->
+
+
+<meta id="ba_s" property="options" content="" data-o="{&quot;tid&quot;:&quot;UA-43309925-3&quot;,&quot;co&quot;:&quot;auto&quot;,&quot;g&quot;:1073810280,&quot;dl&quot;:&quot;\\.avi|\\.doc|\\.exe|\\.gz|\\.mpg|\\.mp3|\\.pdf|\\.ppt|\\.psd|\\.rar|\\.wmv|\\.xls|\\.zip&quot;,&quot;s&quot;:0,&quot;a&quot;:0,&quot;d&quot;:{&quot;a&quot;:[2,&quot;purethemes&quot;],&quot;y&quot;:[4,2015],&quot;r&quot;:[5,&quot;guest&quot;]}}" /><script type='text/javascript' src='../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/plugins/purethemes-shortcodes/js/shortcodes.js'></script>
+
+
+
+</body>
