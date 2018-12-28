@@ -32,7 +32,9 @@ export class AccueilComponent implements OnInit {
   }
 
   doLogOut() {
-    this.authService.doLogout();
+    this.authService.doLogout(); 
+    this.router.navigate(['\accueil']);
+    
   }
 
   ngOnInit(): void {

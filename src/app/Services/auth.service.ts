@@ -28,6 +28,7 @@ export class AuthService {
 
       if (firebase.auth().currentUser) {
         firebase.auth().signOut();
+        
       }
   }
 
