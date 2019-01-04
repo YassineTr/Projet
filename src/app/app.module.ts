@@ -14,6 +14,9 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ProfilComponent } from './profil/profil.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostjobComponent } from './postjob/postjob.component';
+import { JobListComponent } from './job-list/job-list.component';
+import { AddJobComponent } from './add-job/add-job.component';
+import { EditJobComponent } from './edit-job/edit-job.component';
 
 
 @NgModule({
@@ -31,7 +34,13 @@ import { PostjobComponent } from './postjob/postjob.component';
 
     NavbarComponent,
 
-    PostjobComponent
+    PostjobComponent,
+
+    JobListComponent,
+
+    AddJobComponent,
+
+    EditJobComponent
   ],
   imports: [
     BrowserModule,

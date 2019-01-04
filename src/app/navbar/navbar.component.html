@@ -14,7 +14,7 @@
   <ul class="float-right">
     <li [hidden]="(isAuth | async)"><a href="#signup-dialog" class="small-dialog popup-with-zoom-anim"><i class="fa fa-user"></i> Sign Up</a></li>
     <li [hidden]="(isAuth | async)"><a href="#login-dialog" class="small-dialog popup-with-zoom-anim"><i class="fa fa-lock"></i> Log In</a> </li>
-    <li [hidden]="!(isAuth | async)"><a   (click)="doLogOut()" class="small-dialog popup-with-zoom-anim" routerLink="/accueil"><i class="fa fa-lock"></i> Log Out</a> </li>
+    <li [hidden]="!(isAuth | async)"><a   (click)="doLogOut()" class="small-dialog popup-with-zoom-anim"><i class="fa fa-lock"></i> Log Out</a> </li>
   </ul>
   <!-- <ul class="float-right">
     <li><button (click)="doLogOut()" class="small-dialog popup-with-zoom-anim"><i class="fa fa-lock"></i> Log Out</button> </li>
