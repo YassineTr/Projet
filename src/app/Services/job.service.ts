@@ -3,7 +3,7 @@ import {AngularFireDatabase, AngularFireList, AngularFireObject} from '@angular/
 import {Job} from '../model/job';
 
 @Injectable({
-  providedIn:'root'
+  providedIn: 'root'
 })
 
 export class JobService {
@@ -12,7 +12,7 @@ export class JobService {
   constructor(private db: AngularFireDatabase){}
 
 
-  AddJobs(job: Job){
+  AddJobs(job: Job) {
 
     this.jobsRef.push({
     title: job.title,
