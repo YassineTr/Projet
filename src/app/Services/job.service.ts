@@ -9,26 +9,26 @@ import {Job} from '../model/job';
 export class JobService {
   jobsRef: AngularFireList<any>;
   jobRef: AngularFireObject<any>;
-  constructor(private db: AngularFireDatabase){}
+  constructor(private db: AngularFireDatabase) {}
 
 
   AddJobs(job: Job) {
-
-    this.jobsRef.push({
+    this.db.list('/jobs').push(job);
+    /* this.jobsRef.push({
     title: job.title,
     Email: job.Email,
     location: job.location,
     description: job.description,
     price: job.price,
     image: job.image
-    });
+    }); */
   }
-  Getjob(id: string){
-    this.jobRef = this.db.object('jobs/' +id);
+  Getjob(id: string) {
+    this.jobRef = this.db.object('jobs/' + id);
     return this.jobRef ;
   }
 
-  GetJobsList(){
+  GetJobsList() {
     this.jobsRef = this.db.list('jobs');
     return this.jobsRef;
   }
@@ -40,10 +40,11 @@ export class JobService {
       location: job.location,
       description: job.description,
       price: job.price,
-      image: job.image
+      company: job.company,
+
     });
     }
-  DeleteJob(id: string){
+  DeleteJob(id: string) {
     this.jobRef = this.db.object('jobs/'+ id);
     this.jobRef.remove();
   }

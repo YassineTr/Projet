@@ -1,4 +1,4 @@
-export class Job {
+export class Jobs {
   $key: string;
   title: string;
   Email: string;
@@ -8,5 +8,5 @@ export class Job {
   category: string;
   price: string;
   company: string;
-  constructor(){}
+  constructor() {}
 }

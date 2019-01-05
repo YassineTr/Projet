@@ -40,7 +40,7 @@
           <ul class="float-right">
               <li [hidden]="(isAuth | async)"><a href="#signup-dialog" class="small-dialog popup-with-zoom-anim"><i class="fa fa-user"></i> Sign Up</a></li>
               <li [hidden]="(isAuth | async)"><a href="#login-dialog" class="small-dialog popup-with-zoom-anim"><i class="fa fa-lock"></i> Log In</a> </li>
-              <li [hidden]="!(isAuth | async)"><a   (click)="doLogOut()" class="small-dialog popup-with-zoom-anim" routerLink="/accueil"><i class="fa fa-lock"></i> Log Out</a> </li>
+              <li [hidden]="!(isAuth | async)"><a   (click)="doLogOut()" class="small-dialog popup-with-zoom-anim" routerLink="/accueil"><i class="fa fa-lock"></i> Log out</a> </li>
           </ul>
           <!-- <ul class="float-right">
             <li><button (click)="doLogOut()" class="small-dialog popup-with-zoom-anim"><i class="fa fa-lock"></i> Log Out</button> </li>
@@ -94,7 +94,8 @@
         <!-- Box -->
 
         <!-- Box -->
-      </div>   <div class="margin-top-30"></div><a  class="button centered" routerLink="/categories">Browse All Categories</a><div class="margin-bottom-50"></div></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_row-no-padding"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey vc_custom_1521227854183  vc_custom_1521227854183" ><span class="vc_sep_holder vc_sep_holder_l"><span  class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span  class="vc_sep_line"></span></span>
+      </div>
+        <div class="margin-top-30"></div><a  class="button centered" routerLink="/categories">Browse All Categories</a><div class="margin-bottom-50"></div></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_row-no-padding"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey vc_custom_1521227854183  vc_custom_1521227854183" ><span class="vc_sep_holder vc_sep_holder_l"><span  class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span  class="vc_sep_line"></span></span>
     </div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><H3 class="margin-top-0 margin-bottom-25">Recent Jobs</H3>
       <div class="wpb_text_column wpb_content_element " >
         <div class="wpb_wrapper">
@@ -109,26 +110,25 @@
 
             <ul class="job_listings job-list full  new-layout hide-desc" >
 
-              <!-- Listing -->
-              <li data-longitude="-0.001870000000053551" data-latitude="51.54327"
+              <li *ngFor="let j of job; let i = index" (click)="Getjob(j.$key)" data-longitude="-0.001870000000053551" data-latitude="51.54327"
                   data-color="#e12335" >
-                <a href="job/restaurant-dishwasher/index.html" class="left post-2489 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-miami job_listing_category-restaurant-food-service job_listing_type-temporary job-type-temporary job_position_featured" data-longitude="-0.001870000000053551" data-latitude="51.54327"   data-color="#e12335" >
+                <a class="left post-2489 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-miami job_listing_category-restaurant-food-service job_listing_type-temporary job-type-temporary job_position_featured" data-longitude="-0.001870000000053551" data-latitude="51.54327"   data-color="#e12335" >
                   <div class="listing-logo">
-                    <img class="company_logo" src="../../assets/39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/company-logo.png" alt="King LLC" />	</div>
+                    	</div>
                   <div class="listing-title">
-                    <h4>Restaurant Dishwasher
-                      <span class="job-type temporary">Temporary</span>
+                    <h4>{{j.title}}
+                      <span class="job-type temporary">{{j.type}}</span>
 
                     </h4>
                     <ul class="listing-icons">
 
-                      <li><i class="ln ln-icon-Management"></i> King LLC</li>
+                      <li><i class="ln ln-icon-Management"></i> {{j.company}}</li>
 
-                      <li><i class="ln ln-icon-Map2"></i>  Miami</li>
+                      <li><i class="ln ln-icon-Map2"></i>  {{j.local}}</li>
 
 
                       <li><i class="ln ln-icon-Money-2"></i>
-                        &#36;55000 - &#36;70000						</li>
+                        &#36;{{j.price}}						</li>
 
                     </ul>
 
@@ -136,83 +136,11 @@
                 </a>
               </li>
               <!-- Listing -->
-              <li data-longitude="-1.546126700000059" data-latitude="53.3795271"
-                  data-color="#f1630d" >
-                <a href="job/clinical-psychologist/index.html" class="left post-2492 job_listing type-job_listing status-publish hentry job_listing_region-new-york job_listing_category-healthcare job_listing_type-part-time job-type-part-time" data-longitude="-1.546126700000059" data-latitude="53.3795271"   data-color="#f1630d" >
-                  <div class="listing-logo">
-                    <img class="company_logo" src="../../assets/39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Rose Clinic" />	</div>
-                  <div class="listing-title">
-                    <h4>Clinical psychologist
-                      <span class="job-type part-time">Part Time</span>
 
-                    </h4>
-                    <ul class="listing-icons">
-
-                      <li><i class="ln ln-icon-Management"></i> Rose Clinic</li>
-
-                      <li><i class="ln ln-icon-Map2"></i>  New York</li>
-
-
-                      <li><i class="ln ln-icon-Money-2"></i>
-                        &#36;40000 - &#36;50000						</li>
-
-                    </ul>
-
-                  </div>
-                </a>
-              </li>
               <!-- Listing -->
-              <li data-longitude="-73.9790653" data-latitude="40.7668893"
-                  data-color="#186fc9" >
-                <a href="job/senior-health-and-nutrition-advisor/index.html" class="left post-2490 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-new-york job_listing_category-healthcare job_listing_type-full-time job-type-full-time" data-longitude="-73.9790653" data-latitude="40.7668893"   data-color="#186fc9" >
-                  <div class="listing-logo">
-                    <img class="company_logo" src="../../assets/39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/Untitled-1-Recovered-150x150_036a17cc6b1cbce4285ea7c4d6a34e16.png" alt="Telimed" />	</div>
-                  <div class="listing-title">
-                    <h4>Senior Health and Nutrition Advisor
-                      <span class="job-type full-time">Full Time</span>
 
-                    </h4>
-                    <ul class="listing-icons">
-
-                      <li><i class="ln ln-icon-Management"></i> Telimed</li>
-
-                      <li><i class="ln ln-icon-Map2"></i>  New York</li>
-
-
-                      <li><i class="ln ln-icon-Money-2"></i>
-                        &#36;30000 - &#36;35000						</li>
-
-                    </ul>
-
-                  </div>
-                </a>
-              </li>
               <!-- Listing -->
-              <li data-longitude="13.3883826" data-latitude="52.5318835"
-                  data-color="#53b427" >
-                <a href="job/social-media-and-public-relation-executive/index.html" class="left post-2487 job_listing type-job_listing status-publish hentry job_listing_region-miami job_listing_category-market-customer-research job_listing_category-sales-marketing job_listing_type-freelance job-type-freelance" data-longitude="13.3883826" data-latitude="52.5318835"   data-color="#53b427" >
-                  <div class="listing-logo">
-                    <img class="company_logo" src="../../assets/39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Socielity" />	</div>
-                  <div class="listing-title">
-                    <h4>Social Media and Public Relation Executive
-                      <span class="job-type freelance">Freelance</span>
 
-                    </h4>
-                    <ul class="listing-icons">
-
-                      <li><i class="ln ln-icon-Management"></i> Socielity</li>
-
-                      <li><i class="ln ln-icon-Map2"></i>  Miami</li>
-
-
-                      <li><i class="ln ln-icon-Money-2"></i>
-                        &#36;15000						</li>
-
-                    </ul>
-
-                  </div>
-                </a>
-              </li>
 
             </ul>
 
@@ -234,123 +162,8 @@
 
       <!-- Showbiz Container -->
 
-    </div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1521210767063 vc_row-has-fill vc_row-no-padding"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 style="text-align:center;" class="centered headline margin-top-0 margin-bottom-25 ">What Our Users Say 😍<span class="margin-top:25px;">We collect reviews from our users so you can get an honest opinion of what an experience with our website are really like!</span></h3>
-      <!-- Testimonials Carousel -->
-      <div class="fullwidth-carousel-container margin-top-20">
-        <div class="testimonial-carousel testimonials">
-
-          <!-- Item -->
-          <div class="fw-carousel-review">
-
-            <div class="testimonial-box">
-              <div class="testimonial"><p>I have already heard back about the internship I applied through WorkScout, that&#8217;s the fastest job reply I&#8217;ve ever gotten and it&#8217;s so much better than waiting weeks to hear back.</p>
-              </div>
-            </div>
-            <div class="testimonial-author">
-              <img width="130" height="130" src="../../assets/39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/resumes-list-avatar-03.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/resumes-list-avatar-03.png 130w, https://39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/resumes-list-avatar-03-100x100.png 100w" sizes="(max-width: 130px) 100vw, 130px" />					<h4>John Smith <span>Jobseeker</span></h4>
-            </div>
-          </div>
-          <!-- Item -->
-          <div class="fw-carousel-review">
-
-            <div class="testimonial-box">
-              <div class="testimonial"><p>Nam eu eleifend nulla. Duis consectetur sit amet risus sit amet venenatis. Pellentesque pulvinar ante a tincidunt placerat. Donec dapibus efficitur arcu, a rhoncus lectus egestas elementum.</p>
-              </div>
-            </div>
-            <div class="testimonial-author">
-              <img width="130" height="130" src="../../assets/39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/resumes-list-avatar-01.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/resumes-list-avatar-01.png 130w, https://39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/resumes-list-avatar-01-100x100.png 100w" sizes="(max-width: 130px) 100vw, 130px" />					<h4>Tom Wilson <span>HR Specialist</span></h4>
-            </div>
-          </div>
-          <!-- Item -->
-          <div class="fw-carousel-review">
-
-            <div class="testimonial-box">
-              <div class="testimonial"><p>Nam eu eleifend nulla. Duis consectetur sit amet risus sit amet venenatis. Pellentesque pulvinar ante a tincidunt placerat. Donec dapibus efficitur arcu, a rhoncus lectus egestas elementum.</p>
-              </div>
-            </div>
-            <div class="testimonial-author">
-              <img width="130" height="130" src="../../assets/39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/resumes-list-avatar-02.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/resumes-list-avatar-02.png 130w, https://39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/resumes-list-avatar-02-100x100.png 100w" sizes="(max-width: 130px) 100vw, 130px" />					<h4>Anna Smith <span>Jobseeker</span></h4>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-    </div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1521201754193 vc_row-has-fill vc_row-no-padding"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
-      <!-- Flip banner -->
-      <a href="#" class="flip-banner parallax" data-background="https://workscout.in/wp-content/uploads/2018/03/all-categories-photo.jpg" data-color="#26ae62" data-color-opacity="0.92" data-img-width="2500" data-img-height="1600">
-
-        <div class="flip-banner-content">
-          <h2 class="flip-visible">Step inside and see for yourself!</h2>
-          <h2 class="flip-hidden">Get Started <i class="fa fa-angle-right"></i></h2>
-        </div>
-      </a>
-      <!-- Flip banner / End -->
-    </div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid vc_custom_1521213719082"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><H3 class="margin-top-0 margin-bottom-25"> Recent Posts</H3><div class="recent-blog-posts vc_row vc_no-gutters">
-      <div class="vc_col-sm-4 wpb_column alpha">
-        <article class="recent-post">
-          <figure class="recent-post-img">
-            <a href="2015/10/11-tips-to-help-you-get-new-clients-through-cold-calling/index.html"><img width="498" height="315" src="../../assets/39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/blog-post-03-498x315.jpg" class="attachment-workscout-small-blog size-workscout-small-blog wp-post-image" alt="" /></a>
-            <div class="hover-icon"></div>
-          </figure>
-
-          <section class="from-the-blog-content">
-            <a href="2015/10/11-tips-to-help-you-get-new-clients-through-cold-calling/index.html"><h4>11 Tips to Help You Get New Clients Through Cold Calling</h4></a> <div class="meta-tags"></div>
-            <p>Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly predominate</p>
-            <a href="2015/10/11-tips-to-help-you-get-new-clients-through-cold-calling/index.html" class="button">Read More</a>
-          </section>
-
-        </article>
-      </div>
-      <div class="vc_col-sm-4 wpb_column ">
-        <article class="recent-post">
-          <figure class="recent-post-img">
-            <a href="2015/10/how-to-woo-a-recruiter-and-land-your-dream-job/index.html"><img width="498" height="315" src="../../assets/39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/blog-post-02-498x315.jpg" class="attachment-workscout-small-blog size-workscout-small-blog wp-post-image" alt="" /></a>
-            <div class="hover-icon"></div>
-          </figure>
-
-          <section class="from-the-blog-content">
-            <a href="2015/10/how-to-woo-a-recruiter-and-land-your-dream-job/index.html"><h4>How to &#8220;Woo&#8221; a Recruiter and Land Your Dream Job</h4></a> <div class="meta-tags"></div>
-            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C</p>
-            <a href="2015/10/how-to-woo-a-recruiter-and-land-your-dream-job/index.html" class="button">Read More</a>
-          </section>
-
-        </article>
-      </div>
-      <div class="vc_col-sm-4 wpb_column omega">
-        <article class="recent-post">
-          <figure class="recent-post-img">
-            <a href="2015/10/hey-job-seeker-its-time-to-get-up-and-get-hired/index.html"><img width="498" height="315" src="../../assets/39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/blog-post-01-498x315.jpg" class="attachment-workscout-small-blog size-workscout-small-blog wp-post-image" alt="" /></a>
-            <div class="hover-icon"></div>
-          </figure>
-
-          <section class="from-the-blog-content">
-            <a href="2015/10/hey-job-seeker-its-time-to-get-up-and-get-hired/index.html"><h4>Hey Job Seeker, It’s Time To Get Up And Get Hired</h4></a> <div class="meta-tags"></div>
-            <p>One morning, when Gregor Samsa woke from troubled dreams, he</p>
-            <a href="2015/10/hey-job-seeker-its-time-to-get-up-and-get-hired/index.html" class="button">Read More</a>
-          </section>
-
-        </article>
-      </div></div></div></div></div></div>
+    </div></div></div></div>
     </article>
   </div>
-  <!-- Footer
-  ================================================== -->
-  <div class="margin-top-45"></div>
-
-  <div id="footer">
-    <!-- Main -->
-
-
-    <!-- Bottom -->
-
-
-  </div>
-
-  <!-- Back To Top Button -->
-
 </div>
-<!-- Wrapper / End -->
-
 </body>

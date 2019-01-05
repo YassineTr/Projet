@@ -14,8 +14,7 @@ const routes: Routes = [
   { path: 'categories' , component: CategoriesComponent},
   { path: 'profil' , component: ProfilComponent},
   { path: 'offre' , component: OffreComponent},
-  { path: 'postjob' , component: AddJobComponent},
-
+  { path: 'postjob' , component: PostjobComponent},
   { path: '**' , redirectTo: 'accueil' },
 ];
 

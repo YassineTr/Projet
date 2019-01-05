@@ -81,255 +81,33 @@
           <ul class="job_listings job-list full  new-layout " >
 
             <!-- Listing -->
-            <li data-longitude="-0.001870000000053551" data-latitude="51.54327"
+            <li *ngFor="let j of job; let i = index" (click)="Getjob(j.$key)"  data-longitude="-0.001870000000053551" data-latitude="51.54327"
                 data-color="#e12335" >
-              <a href="../job/restaurant-dishwasher/index.html" class="left post-2489 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-miami job_listing_category-restaurant-food-service job_listing_type-temporary job-type-temporary job_position_featured" data-longitude="-0.001870000000053551" data-latitude="51.54327"   data-color="#e12335" >
+              <a  class="left post-2489 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-miami job_listing_category-restaurant-food-service job_listing_type-temporary job-type-temporary job_position_featured" data-longitude="-0.001870000000053551" data-latitude="51.54327"   data-color="#e12335" >
                 <div class="listing-logo">
-                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/company-logo.png" alt="King LLC" />	</div>
+                  	</div>
                 <div class="listing-title">
-                  <h4>Restaurant Dishwasher
-                    <span class="job-type temporary">Temporary</span>
+                  <h4>
+                    {{j.title}}
+                    <span class="job-type temporary">{{j.type}}</span>
 
                   </h4>
                   <ul class="listing-icons">
 
-                    <li><i class="ln ln-icon-Management"></i> King LLC</li>
+                    <li><i class="ln ln-icon-Management"></i> {{j.company}}</li>
 
-                    <li><i class="ln ln-icon-Map2"></i>  Miami</li>
+                    <li><i class="ln ln-icon-Map2"></i>  {{j.location}}</li>
 
 
                     <li><i class="ln ln-icon-Money-2"></i>
-                      &#36;55000 - &#36;70000						</li>
-
+                      &#36;{{j.price}}					</li>
+                    <li><i class="ln ln-icon-Edit"></i>
+                       <button routerLink="/profil">Apply</button>					</li>
                   </ul>
 
                 </div>
               </a>
             </li>
-            <!-- Listing -->
-            <li data-longitude="-1.546126700000059" data-latitude="53.3795271"
-                data-color="#f1630d" >
-              <a href="../job/clinical-psychologist/index.html" class="left post-2492 job_listing type-job_listing status-publish hentry job_listing_region-new-york job_listing_category-healthcare job_listing_type-part-time job-type-part-time" data-longitude="-1.546126700000059" data-latitude="53.3795271"   data-color="#f1630d" >
-                <div class="listing-logo">
-                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Rose Clinic" />	</div>
-                <div class="listing-title">
-                  <h4>Clinical psychologist
-                    <span class="job-type part-time">Part Time</span>
-
-                  </h4>
-                  <ul class="listing-icons">
-
-                    <li><i class="ln ln-icon-Management"></i> Rose Clinic</li>
-
-                    <li><i class="ln ln-icon-Map2"></i>  New York</li>
-
-
-                    <li><i class="ln ln-icon-Money-2"></i>
-                      &#36;40000 - &#36;50000						</li>
-
-                  </ul>
-
-                </div>
-              </a>
-            </li>
-            <!-- Listing -->
-            <li data-longitude="-73.9790653" data-latitude="40.7668893"
-                data-color="#186fc9" >
-              <a href="../job/senior-health-and-nutrition-advisor/index.html" class="left post-2490 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-new-york job_listing_category-healthcare job_listing_type-full-time job-type-full-time" data-longitude="-73.9790653" data-latitude="40.7668893"   data-color="#186fc9" >
-                <div class="listing-logo">
-                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/Untitled-1-Recovered-150x150_036a17cc6b1cbce4285ea7c4d6a34e16.png" alt="Telimed" />	</div>
-                <div class="listing-title">
-                  <h4>Senior Health and Nutrition Advisor
-                    <span class="job-type full-time">Full Time</span>
-
-                  </h4>
-                  <ul class="listing-icons">
-
-                    <li><i class="ln ln-icon-Management"></i> Telimed</li>
-
-                    <li><i class="ln ln-icon-Map2"></i>  New York</li>
-
-
-                    <li><i class="ln ln-icon-Money-2"></i>
-                      &#36;30000 - &#36;35000						</li>
-
-                  </ul>
-
-                </div>
-              </a>
-            </li>
-            <!-- Listing -->
-            <li data-longitude="13.3883826" data-latitude="52.5318835"
-                data-color="#53b427" >
-              <a href="../job/social-media-and-public-relation-executive/index.html" class="left post-2487 job_listing type-job_listing status-publish hentry job_listing_region-miami job_listing_category-market-customer-research job_listing_category-sales-marketing job_listing_type-freelance job-type-freelance" data-longitude="13.3883826" data-latitude="52.5318835"   data-color="#53b427" >
-                <div class="listing-logo">
-                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Socielity" />	</div>
-                <div class="listing-title">
-                  <h4>Social Media and Public Relation Executive
-                    <span class="job-type freelance">Freelance</span>
-
-                  </h4>
-                  <ul class="listing-icons">
-
-                    <li><i class="ln ln-icon-Management"></i> Socielity</li>
-
-                    <li><i class="ln ln-icon-Map2"></i>  Miami</li>
-
-
-                    <li><i class="ln ln-icon-Money-2"></i>
-                      &#36;15000						</li>
-
-                  </ul>
-
-                </div>
-              </a>
-            </li>
-            <!-- Listing -->
-            <li data-longitude="-104.8263422" data-latitude="39.6315664"
-                data-color="#e1d123" >
-              <a href="../job/grader-operator/index.html" class="left post-2486 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-san-francisco job_listing_category-construction-facilities job_listing_type-internship job-type-internship" data-longitude="-104.8263422" data-latitude="39.6315664"   data-color="#e1d123" >
-                <div class="listing-logo">
-                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/Untitled-1-150x150.png" alt="Diag Block" />	</div>
-                <div class="listing-title">
-                  <h4>Grader Operator
-                    <span class="job-type internship">Internship</span>
-
-                  </h4>
-                  <ul class="listing-icons">
-
-                    <li><i class="ln ln-icon-Management"></i> Diag Block</li>
-
-                    <li><i class="ln ln-icon-Map2"></i>  San Francisco</li>
-
-
-                    <li><i class="ln ln-icon-Money-2"></i>
-                      &#36;35000 - &#36;38000						</li>
-
-                  </ul>
-
-                </div>
-              </a>
-            </li>
-            <!-- Listing -->
-            <li data-longitude="2.086515400000053" data-latitude="41.4720702"
-                data-color="#186fc9" >
-              <a href="../job/head-of-commercial-contracts/index.html" class="left post-2485 job_listing type-job_listing status-publish hentry job_listing_region-san-francisco job_listing_category-accounting-finance job_listing_type-full-time job-type-full-time" data-longitude="2.086515400000053" data-latitude="41.4720702"   data-color="#186fc9" >
-                <div class="listing-logo">
-                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Moore &amp; Kavinsky" />	</div>
-                <div class="listing-title">
-                  <h4>Head of Commercial Contracts
-                    <span class="job-type full-time">Full Time</span>
-
-                  </h4>
-                  <ul class="listing-icons">
-
-                    <li><i class="ln ln-icon-Management"></i> Moore &amp; Kavinsky</li>
-
-                    <li><i class="ln ln-icon-Map2"></i>  San Francisco</li>
-
-
-
-                  </ul>
-
-                </div>
-              </a>
-            </li>
-            <!-- Listing -->
-            <li data-longitude="-0.4907180000000153" data-latitude="38.34606019999999"
-                data-color="#186fc9" >
-              <a href="../job/telecommunication-systems-engineer/index.html" class="left post-2484 job_listing type-job_listing status-publish hentry job_listing_region-san-francisco job_listing_category-telecommunications job_listing_type-full-time job-type-full-time" data-longitude="-0.4907180000000153" data-latitude="38.34606019999999"   data-color="#186fc9" >
-                <div class="listing-logo">
-                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Virgin" />	</div>
-                <div class="listing-title">
-                  <h4>Telecommunication Systems Engineer
-                    <span class="job-type full-time">Full Time</span>
-
-                  </h4>
-                  <ul class="listing-icons">
-
-                    <li><i class="ln ln-icon-Management"></i> Virgin</li>
-
-                    <li><i class="ln ln-icon-Map2"></i>  San Francisco</li>
-
-
-
-                  </ul>
-
-                </div>
-              </a>
-            </li>
-            <!-- Listing -->
-            <li data-longitude="7.774270200000046" data-latitude="44.25746739999999"
-                data-color="#f1630d" >
-              <a href="../job/motor-vehicle-technician/index.html" class="left post-2483 job_listing type-job_listing status-publish hentry job_listing_region-san-francisco job_listing_category-automotive-jobs job_listing_type-part-time job-type-part-time" data-longitude="7.774270200000046" data-latitude="44.25746739999999"   data-color="#f1630d" >
-                <div class="listing-logo">
-                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/placeholder.png" alt="Garbage Garage" />	</div>
-                <div class="listing-title">
-                  <h4>Vehicle Technician
-                    <span class="job-type part-time">Part Time</span>
-
-                  </h4>
-                  <ul class="listing-icons">
-
-                    <li><i class="ln ln-icon-Management"></i> Garbage Garage</li>
-
-                    <li><i class="ln ln-icon-Map2"></i>  San Francisco</li>
-
-
-
-                  </ul>
-
-                </div>
-              </a>
-            </li>
-            <!-- Listing -->
-            <li data-longitude="55.2707828" data-latitude="25.2048493"
-                data-color="#333" >
-              <a href="../job/senior-technician-trading-enterprise/index.html" class="left post-2482 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-new-york job_listing_category-transportation-logistics" data-longitude="55.2707828" data-latitude="25.2048493"   data-color="#333" >
-                <div class="listing-logo">
-                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/travelsea1-150x150.png" alt="Travelsea" />	</div>
-                <div class="listing-title">
-                  <h4>Senior Technician &#8211; Trading Enterprise
-
-                  </h4>
-                  <ul class="listing-icons">
-
-                    <li><i class="ln ln-icon-Management"></i> Travelsea</li>
-
-                    <li><i class="ln ln-icon-Map2"></i>  New York</li>
-
-
-
-                  </ul>
-
-                </div>
-              </a>
-            </li>
-            <!-- Listing -->
-            <li data-longitude="-87.77921959999998" data-latitude="41.7014217"
-                data-color="#f1630d" >
-              <a href="../job/warehouse-operative/index.html" class="left post-2481 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-new-york job_listing_category-transportation-logistics job_listing_type-part-time job-type-part-time" data-longitude="-87.77921959999998" data-latitude="41.7014217"   data-color="#f1630d" >
-                <div class="listing-logo">
-                  <img class="company_logo" src="../../39sf152pf74z2negmt1gi8ik-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/sdf2-150x150.png" alt="Cubico" />	</div>
-                <div class="listing-title">
-                  <h4>Warehouse Operative
-                    <span class="job-type part-time">Part Time</span>
-
-                  </h4>
-                  <ul class="listing-icons">
-
-                    <li><i class="ln ln-icon-Management"></i> Cubico</li>
-
-                    <li><i class="ln ln-icon-Map2"></i>  New York</li>
-
-
-
-                  </ul>
-
-                </div>
-              </a>
-            </li>
-
           </ul>
 
 

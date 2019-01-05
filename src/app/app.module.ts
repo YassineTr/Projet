@@ -1,6 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { LoginComponent } from './login/login.component';
@@ -17,6 +16,10 @@ import { PostjobComponent } from './postjob/postjob.component';
 import { JobListComponent } from './job-list/job-list.component';
 import { AddJobComponent } from './add-job/add-job.component';
 import { EditJobComponent } from './edit-job/edit-job.component';
+import {HttpClientModule} from '@angular/common/http';
+import {AngularFireModule} from 'angularfire2';
+import {environment} from '../environments/environment';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
 
 
 @NgModule({
@@ -25,30 +28,25 @@ import { EditJobComponent } from './edit-job/edit-job.component';
     AccueilComponent,
     LoginComponent,
     InscriptionComponent,
-
     OffreComponent,
-
     CategoriesComponent,
-
     ProfilComponent,
-
     NavbarComponent,
-
     PostjobComponent,
-
     JobListComponent,
-
     AddJobComponent,
-
     EditJobComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [AuthService , AuthGuardService],
+  providers: [AuthService , AuthGuardService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

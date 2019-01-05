@@ -5,6 +5,8 @@ import * as firebase from 'firebase';
 import {Observable} from 'rxjs';
 import {CheckConnection} from '../Services/CheckConnection.service';
 import {AuthGuardService} from '../Services/auth-guard.service';
+import {Job} from '../model/job';
+import {JobService} from '../Services/job.service';
 
 @Component({
   selector: 'app-accueil',
@@ -13,8 +15,9 @@ import {AuthGuardService} from '../Services/auth-guard.service';
 })
 export class AccueilComponent implements OnInit {
   user = true ;
+  job: Job[];
    isAuth: Observable<boolean> | Promise<boolean> | boolean ;
-  constructor(private authService: AuthService , private router: Router , private  checkConnection: AuthGuardService) {
+  constructor(private authService: AuthService , private router: Router , private  checkConnection: AuthGuardService , public jobservice: JobService) {
     this.checkUser();
   }
 
@@ -39,6 +42,16 @@ export class AccueilComponent implements OnInit {
 
   ngOnInit(): void {
      this.isAuth = this.checkConnection.CanActivate();
+    const s = this.jobservice.GetJobsList();
+    s.snapshotChanges().subscribe(data => { // Using snapshotChanges() method to retrieve list of data along with metadata($key)
+      this.job = [];
+      data.forEach(item => {
+        const a = item.payload.toJSON();
+        a['$key'] = item.key;
+        this.job.push(a as Job);
+        console.log(this.job);
+      });
+    });
   }
 
 
