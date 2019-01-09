@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {JobService} from '../Services/job.service';
 import {Job} from '../model/job';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-offre',
@@ -9,7 +10,7 @@ import {Job} from '../model/job';
 })
 export class OffreComponent implements OnInit {
 
-  constructor (public jobservice: JobService) { }
+  constructor (public jobservice: JobService , public route: Router) { }
  job: Job[];
   ngOnInit() {
     const s = this.jobservice.GetJobsList();
@@ -23,5 +24,9 @@ export class OffreComponent implements OnInit {
       });
     });
   }
+
+Apply(id: String) {
+    this.route.navigate(['profil',id]);
+}
 
 }

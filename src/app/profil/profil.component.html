@@ -114,13 +114,7 @@
 
       <div class="sixteen columns">
         <h1>Candidate Dashboard</h1>
-        <nav id="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
-          <ul>
-            <!-- Breadcrumb NavXT 6.0.4 -->
-            <li class="home"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to WorkScout." href="../index.html" class="home"><span property="name"></span></a><meta property="position" content="1"></span></li>
-            <li class="post post-page current-item"><span property="itemListElement" typeof="ListItem"><span property="name"></span><meta property="position" content="2"></span></li>
-          </ul>
-        </nav>
+        <h3>{{email}}</h3>
       </div>
     </div>
   </div>
@@ -133,28 +127,20 @@
           <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard is-active">
             <a href="../my-account/index.html">Dashboard</a>
           </li>
-          <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
-            <a href="../my-account/orders/index.html">Orders</a>
-          </li>
-          <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--downloads">
-            <a href="../my-account/downloads/index.html">Downloads</a>
-          </li>
-          <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address">
-            <a href="../my-account/edit-address/index.html">Addresses</a>
-          </li>
-          <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account">
-            <a href="../my-account/edit-account/index.html">Account details</a>
-          </li>
-          <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout">
-            <a href="../my-account/customer-logout/index05ae.html?_wpnonce=6c40bdc260">Logout</a>
-          </li>
+
         </ul>
       </nav>
 
       <div class="woocommerce-MyAccount-content">
         <div id="resume-manager-candidate-dashboard">
 
-          <p class="account-sign-in">Welcome your dashboard is empty go to home page to find offers</p>
+          <p class="account-sign-in">You applied for this opportunity : <br>
+            {{job.title}} At {{job.company}}
+          With this salary {{job.price}} <br>
+          You will receive an Email from
+          {{job.Email}}</p>
+
+          <button>Delete opportunity</button>
 
 
         </div>

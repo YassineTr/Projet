@@ -30,9 +30,9 @@ createForm() {
     this.authService.doLogin(email, password)
       .then(res => {
         console.log(res);
-        this.router.navigate(['\profil']);
+        this.router.navigate(['\offre']);
         this.errorMessage = 'Welcome';
-        console.log('succes');
+        console.log('success');
       }, err => {
         console.log(err);
         this.errorMessage = err.message;

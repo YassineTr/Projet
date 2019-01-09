@@ -20,6 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
+import { ProfComponent } from './offre/prof/prof.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
     PostjobComponent,
     JobListComponent,
     AddJobComponent,
-    EditJobComponent
+    EditJobComponent,
+    ProfComponent
   ],
   imports: [
     BrowserModule,

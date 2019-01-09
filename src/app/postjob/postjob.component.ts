@@ -57,7 +57,6 @@ export class PostjobComponent implements OnInit {
     this.job.description = this.jobForm.get('description').value;
     this.job.price = this.jobForm.get('price').value;
     this.job.company = this.jobForm.get('company').value;
-    console.log('ok');
      this.jobservice.AddJobs(this.job);
   }
 

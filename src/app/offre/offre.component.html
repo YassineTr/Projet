@@ -1,17 +1,11 @@
 <body class="page-template-default page page-id-2871 fullwidth group-blog workscout wpb-js-composer js-comp-ver-5.4.7 vc_responsive">
-
-
 <div id="wrapper">
-
   <header class="default sticky-header" id="main-header">
     <div class="container">
       <div class="sixteen columns">
-
-        <!-- Logo -->
         <div id="logo">
-          <a href="../index.html" title="WorkScout" rel="home"></a>
+          <a title="WorkScout" rel="home"></a>
         </div>
-        <!-- Mobile Navigation -->
         <div class="mmenu-trigger">
           <button class="hamburger hamburger--collapse" type="button">
 				<span class="hamburger-box">
@@ -19,40 +13,20 @@
 				</span>
           </button>
         </div>
-
-        <!-- Menu -->
-
         <nav id="navigation" class="menu">
-
           <ul id="responsive" class="menu"><li id="menu-item-2876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-2876"><a href="../index.html">Home</a>
-
           </li>
             <li id="menu-item-2859" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-2859" routerLink="/profil"><a>Profil</a>
-
             </li>
-            <li id="menu-item-2860" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2860"><a href="#">Post a job</a>
-
+            <li id="menu-item-2860" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2860" routerLink="/postjob"><a>Post a job</a>
             </li>
-
           </ul>
-
         </nav>
-
-
-
-
-
-
       </div>
     </div>
   </header>
   <div class="clearfix"></div>
-  <!-- Titlebar
-  ================================================== -->
-
-
   <div class="container  wpjm-container right-sidebar">
-    <!-- Widgets -->
     <div class="five columns sidebar"  role="complementary">
       <div class="widget job-widget-keywords">
         <h4>Keywords</h4>
@@ -63,24 +37,17 @@
           </div>
         </form>
       </div>
-
-    </div><!-- #secondary -->
-
+    </div>
     <article id="post-2871" class="eleven columns post-2871 page type-page status-publish hentry">
       <div class="padding-right">
-
         <div class="job_listings " data-location="" data-keywords="" data-show_filters="false" data-show_pagination="true" data-job_types="" data-per_page="10" data-orderby="featured" data-order="DESC" data-categories="" >
-          <!-- Listings Loader -->
           <div class="listings-loader">
             <div class="spinner">
               <div class="double-bounce1"></div>
               <div class="double-bounce2"></div>
             </div>
           </div>
-
           <ul class="job_listings job-list full  new-layout " >
-
-            <!-- Listing -->
             <li *ngFor="let j of job; let i = index" (click)="Getjob(j.$key)"  data-longitude="-0.001870000000053551" data-latitude="51.54327"
                 data-color="#e12335" >
               <a  class="left post-2489 job_listing type-job_listing status-publish has-post-thumbnail hentry job_listing_region-miami job_listing_category-restaurant-food-service job_listing_type-temporary job-type-temporary job_position_featured" data-longitude="-0.001870000000053551" data-latitude="51.54327"   data-color="#e12335" >
@@ -90,47 +57,34 @@
                   <h4>
                     {{j.title}}
                     <span class="job-type temporary">{{j.type}}</span>
-
                   </h4>
                   <ul class="listing-icons">
-
                     <li><i class="ln ln-icon-Management"></i> {{j.company}}</li>
-
                     <li><i class="ln ln-icon-Map2"></i>  {{j.location}}</li>
-
-
                     <li><i class="ln ln-icon-Money-2"></i>
                       &#36;{{j.price}}					</li>
                     <li><i class="ln ln-icon-Edit"></i>
-                       <button routerLink="/profil">Apply</button>					</li>
+                       <button routerLink="/profil" (click)="Apply(j.$key)">Apply </button>					</li>
                   </ul>
-
                 </div>
               </a>
             </li>
           </ul>
-
-
-
           <nav class="job-manager-pagination pagination">
             <ul>
-
               <li><span class="current" data-page="1">1</span></li><li><a href="#" data-page="2">2</a></li><li><a href="#" data-page="3">3</a></li>
               <li style="float:right; position: absolute; right: 0; "><a href="#" data-page="2">Next</a></li>
             </ul>
           </nav>
-
         </div>
         <footer class="entry-footer">
         </footer><!-- .entry-footer -->
       </div>
     </article>
-
   </div>
   <!-- Footer
   ================================================== -->
   <div class="margin-top-45"></div>
-
   <div id="footer">
     <!-- Main -->
     <div class="container">
@@ -138,14 +92,9 @@
         <aside id="text-3" class="footer-widget widget_text"><h4>About</h4>			<div class="textwidget"><p> Welcome to MYJjobTT this website is developped by Yassine Triki and taieb Moez </p>
           <a href="https://themeforest.net/item/workscout-job-board-wordpress-theme/13591801?ref=purethemes" class="button">Learn More</a></div>
         </aside>            </div>
-
-
-
     </div>
 
     <!-- Bottom -->
-
-
   </div>
 
   <!-- Back To Top Button -->
