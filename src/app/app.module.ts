@@ -21,6 +21,7 @@ import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import { ProfComponent } from './offre/prof/prof.component';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ProfComponent } from './offre/prof/prof.component';
     JobListComponent,
     AddJobComponent,
     EditJobComponent,
-    ProfComponent
+    ProfComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
